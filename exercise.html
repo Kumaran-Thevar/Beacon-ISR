@@ -1,0 +1,783 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <title>eLEARNING - eLearning HTML Template</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <meta content="" name="keywords" />
+    <meta content="" name="description" />
+
+    <!-- Favicon -->
+    <link href="img/favicon.ico" rel="icon" />
+
+    <!-- Google Web Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Heebo:wght@400;500;600&family=Nunito:wght@600;700;800&display=swap"
+        rel="stylesheet" />
+
+    <!-- Icon Font Stylesheet -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet" />
+    r
+    <!-- Libraries Stylesheet -->
+    <link href="lib/animate/animate.min.css" rel="stylesheet" />
+    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet" />
+
+    <!-- Customized Bootstrap Stylesheet -->
+    <link href="css/bootstrap.min.css" rel="stylesheet" />
+
+    <!-- Template Stylesheet -->
+    <link href="css/style.css" rel="stylesheet" />
+
+    <!--CSS for Exercise-->
+    <style>
+        body {
+            font-family: "Heebo", sans-serif;
+            font-size: 20px;
+            background-color: #f0f0f0;
+            margin-top: -25px;
+        }
+
+        #code-container {
+            background-color: #f8f8f8;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            padding: 20px;
+            margin: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+            font-size: 25px;
+            overflow: auto;
+            /* Add this to enable scrolling for overflow */
+        }
+
+        #code {
+            font-family: "Courier New", monospace;
+            white-space: pre;
+            margin: 0;
+            padding: 0;
+            word-wrap: break-word;
+            /* Add this to break long lines */
+        }
+
+        #buttons {
+            margin-top: 10px;
+            text-align: center;
+        }
+
+        .button {
+            display: inline-block;
+            margin: 0 10px;
+            background-color: #007bff;
+            color: #fff;
+            padding: 8px 16px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            text-decoration: none;
+            text-align: center;
+        }
+
+        .button:hover {
+            background-color: #0056b3;
+        }
+
+        @media (max-width: 768px) {
+            #code-container {
+                margin: 10px;
+            }
+
+            .button {
+                display: block;
+                margin: 10px auto;
+            }
+        }
+
+        .collapsible {
+            background-color: #f8f8f8;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            padding: 10px;
+            margin: 10px;
+            cursor: pointer;
+            font-size: 30px;
+        }
+
+        .content {
+            display: none;
+            background-color: #fff;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            padding: 20px;
+            margin: 20px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+        }
+
+        .active {
+            display: block;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Spinner Start -->
+    <div id="spinner"
+        class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
+        <div class="spinner-border text-primary" style="width: 3rem; height: 3rem" role="status">
+            <span class="sr-only">Loading...</span>
+        </div>
+    </div>
+    <!-- Spinner End -->
+
+    <!-- Navbar Start -->
+    <nav class="navbar navbar-expand-lg bg-white navbar-light shadow sticky-top p-0">
+        <a href="index.html" class="navbar-brand d-flex align-items-center px-4 px-lg-5">
+            <h2 class="m-0 text-primary">
+                <i class="fa fa-book me-3"></i>Satish Tutorials
+            </h2>
+        </a>
+        <button type="button" class="navbar-toggler me-4" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarCollapse">
+            <div class="navbar-nav ms-auto p-4 p-lg-0">
+                <a href="index.html" class="nav-item nav-link">Home</a>
+                <a href="about.html" class="nav-item nav-link">About</a>
+                <a href="courses.html" class="nav-item nav-link">Courses</a>
+                <a href="exercise.html" class="nav-item nav-link active">Exercise</a>
+                <a href="contact.html" class="nav-item nav-link">Contact</a>
+            </div>
+            <!-- <a href="" class="btn btn-primary py-4 px-lg-5 d-none d-lg-block">Join Now<i class="fa fa-arrow-right ms-3"></i></a> -->
+        </div>
+    </nav>
+    <!-- Navbar End -->
+
+    <!-- Header Start -->
+    <div class="container-fluid bg-primary py-5 mb-5 page-header">
+        <div class="container py-5">
+            <div class="row justify-content-center">
+                <div class="col-lg-10 text-center">
+                    <h1 class="display-3 text-white animated slideInDown">Exercise</h1>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Header End -->
+
+    <!-- Testimonial Start -->
+    <div class="container-xxl py-5 wow fadeInUp" data-wow-delay="0.1s">
+        <!--Collapseable 1 Starts-->
+        <div class="container">
+            <!--Collapseable Content Starts-->
+            <div class="collapsible" onclick="toggleCollapse(this)">AES Cryptography</div>
+            <div class="content">
+                <h3>⇒ AES Cryptography</h3>
+                <p>AES (Advanced Encryption Standard) is like a secret code used to protect your digital information,
+                    such as
+                    passwords, messages, and files. It's like having a lock on your data that only the right key can
+                    open.
+                    AES is known for being really good at keeping your information safe from hackers because it's like
+                    having a
+                    super-strong lock with different-sized keys. It's used in many devices and apps to make sure your
+                    private stuff
+                    stays private.</p>
+                <div id="code-container">
+                    <pre id="code">
+from cryptography.fernet import Fernet
+            
+# Generate a random encryption key
+ key = Fernet.generate_key()
+                       
+# Create a Fernet cipher object with the key
+cipher_suite = Fernet(key)
+                       
+# Get user input for the text to be encrypted
+plaintext = input("Enter the text to be encrypted: ").encode('utf-8')
+                       
+# Encrypt the data
+cipher_text = cipher_suite.encrypt(plaintext)
+                       
+print(f"Encryption Key: {key.decode('utf-8')}")
+print(f"Encrypted Text: {cipher_text.decode('utf-8')}")
+                       
+# Decrypt the data
+decrypted_text = cipher_suite.decrypt(cipher_text)
+                       
+print(f"Decrypted Text: {decrypted_text.decode('utf-8')}")
+                    </pre>
+                    <div id="buttons">
+                        <button id="copy-button" class="button">Copy Code</button>
+                        <a href="https://replit.com/@MuskanRauther/aes#main.py" class="button">Execute Code</a>
+                    </div>
+
+                </div>
+                <div>
+                    <p> <br>This code is a simple example of encryption and decryption using the Fernet symmetric-key
+                        encryption scheme.
+                        Here's a layman's explanation of what it does:
+
+                        <br>1. Key Generation: It generates a random secret key. This key is like a special code that
+                        will be used
+                        to lock and unlock the message.
+
+                        <br>2. Encryption: You can enter a message, and the program takes that message and uses the
+                        secret key to
+                        jumble it up, making it unreadable to anyone who doesn't have the same key. This is like putting
+                        your
+                        message in a magic box and locking it with a secret key.
+
+                        <br>3. Display Key and Encrypted Text: It shows you the secret key (which you should keep really
+                        safe
+                        because it's the only way to unlock your message) and the jumbled-up message, which is the
+                        encrypted text.
+
+                        <br>4. Decryption: When you want to read the message again, the program uses the same secret key
+                        to unjumble
+                        it, so you get back your original message. It's like using the key to unlock the magic box and
+                        reveal what's
+                        inside.
+
+                        <br>In a nutshell, this code lets you turn a message into a secret code that only you can decode
+                        with the right
+                        key.
+                    </p>
+                </div>
+            </div>
+            <!--Collapseable Content Ends-->
+        </div>
+        <!--Collapseable 1 ends-->
+
+        <!--Collapseable 2 Starts-->
+        <div class="container">
+            <!--Collapseable Content Starts-->
+            <div class="collapsible" onclick="toggleCollapse(this)">DES Cryptography</div>
+            <div class="content">
+                <h3>⇒ DES Cryptography</h3>
+                <p>DES (Data Encryption Standard) is like an old lock for your digital information. It uses a secret key
+                    to scramble
+                    your data, making it hard for others to understand. However, over time, it's become easier for
+                    modern hackers to
+                    break into this old lock. So, it's like having an older lock on your data that might not be as
+                    secure as newer
+                    ones like AES. While it was once widely used, it's not the best choice for protecting sensitive
+                    information
+                    today.</p>
+                <div id="code-container">
+                    <pre id="code">
+from Crypto.Cipher import DES
+from Crypto.Random import get_random_bytes
+
+# Generate a random 8-byte key for DES
+key = get_random_bytes(8)
+
+# Create a DES cipher object with the key and using ECB mode
+cipher = DES.new(key, DES.MODE_ECB)
+
+# Get user input for the text to be encrypted
+plaintext = input("Enter the text to be encrypted: ")
+
+# Ensure the plaintext is a multiple of 8 bytes (DES block size)
+if len(plaintext) % 8 != 0:
+    padding_length = 8 - len(plaintext) % 8
+    plaintext += ' ' * padding_length
+
+plaintext_bytes = plaintext.encode('utf-8')
+
+# Encrypt the data
+cipher_text = cipher.encrypt(plaintext_bytes)
+
+print(f"Encryption Key: {key.hex()}")
+print(f"Encrypted Text (in hex): {cipher_text.hex()}")
+
+# Decrypt the data
+decrypted_bytes = cipher.decrypt(cipher_text)
+
+# Remove any padding added during encryption
+decrypted_text = decrypted_bytes.rstrip(b' ').decode('utf-8')
+
+print(f"Decrypted Text: {decrypted_text}")
+        </pre>
+                    <div id="buttons">
+                        <button id="copy-button" class="button">Copy Code</button>
+                        <a href="https://replit.com/@MuskanRauther/des#main.py" class="button">Execute Code</a>
+                    </div>
+                </div>
+                <div>
+                    <p><br>This code is like a secure envelope for your messages. Here's a simplified explanation:
+
+                        <br> 1. Key Generation: It creates a secret key (like a magic key) that's 8 bytes long. This key
+                        will be used
+                        to lock and unlock your message.
+
+                        <br> 2. Encryption: You enter a message, and this program uses the secret key to scramble it
+                        into gibberish.
+                        It's like putting your message in a locked box.
+
+                        <br> 3. Ensuring Block Size: DES works in blocks of 8 bytes, so if your message isn't exactly 8
+                        bytes long,
+                        it adds spaces to make it fit. This ensures everything is in the right-sized box.
+
+                        <br> 4. Displaying Key and Encrypted Text: It shows you the secret key (keep it super safe!) and
+                        the
+                        scrambled message in a special way (in hexadecimal format).
+
+                        <br> 5. Decryption: When you want to read the message, you use the same secret key to unscramble
+                        it. It's
+                        like using the magic key to unlock the box and reveal your original message.
+
+                        In short, this code turns your message into a secure, locked box that only you can open with the
+                        right key.
+                    </p>
+                </div>
+            </div>
+            <!--Collapseable Content Ends-->
+        </div>
+        <!--Collapseable 2 ends-->
+
+        <!--Collapseable 3 Starts-->
+        <div class="container">
+            <!--Collapseable Content Starts-->
+            <div class="collapsible" onclick="toggleCollapse(this)">Substitution Cipher</div>
+            <div class="content">
+                <h3>⇒ Substitution cipher</h3>
+                <p>A substitution cipher is like a secret code where each letter in your message gets replaced with
+                    another letter.
+                    For example, "A" might become "B," "B" might become "C," and so on. This jumbles up your message to
+                    hide what
+                    you're saying. It's like having a secret language where only you and the person you're talking to
+                    understand how
+                    to decode the message. However, these types of codes can be pretty easy for someone else to figure
+                    out if they
+                    know the pattern, so they're not very secure for important secrets.</p>
+                <div id="code-container">
+                    <pre id="code">
+            import string
+
+# Define the substitution alphabet (key)
+def create_substitution_key(shift):
+    alphabet = string.ascii_lowercase
+    shifted_alphabet = alphabet[shift:] + alphabet[:shift]
+    return str.maketrans(alphabet, shifted_alphabet)
+
+# Function to encrypt plaintext
+def encrypt(plaintext, shift):
+    substitution_key = create_substitution_key(shift)
+    return plaintext.translate(substitution_key)
+
+# Function to decrypt ciphertext
+def decrypt(ciphertext, shift):
+    substitution_key = create_substitution_key(-shift)
+    return ciphertext.translate(substitution_key)
+
+# Get user input for the text and shift value
+plaintext = input("Enter the text to be encrypted: ").lower()
+shift = int(input("Enter the shift value (integer): "))
+
+# Encrypt the data
+cipher_text = encrypt(plaintext, shift)
+
+print(f"Encrypted Text: {cipher_text}")
+
+# Decrypt the data
+decrypted_text = decrypt(cipher_text, shift)
+
+print(f"Decrypted Text: {decrypted_text}")
+        </pre>
+                    <div id="buttons">
+                        <button id="copy-button" class="button">Copy Code</button>
+                        <a href="https://replit.com/@MuskanRauther/substitution#main.py" class="button">Execute Code</a>
+                    </div>
+                </div>
+                <div>
+                    <p><br>This code is like a secret language where each letter is replaced with another letter, and
+                        only those who
+                        know the secret can understand it. Here's a simplified explanation:
+
+                        <br>1. Substitution Alphabet (Key): The code defines a secret substitution alphabet (key) that
+                        shifts
+                        letters in the regular alphabet by a certain number of positions. For example, if the shift
+                        value is 3, 'a'
+                        becomes 'd,' 'b' becomes 'e,' and so on.
+
+                        <br>2. Encryption: You enter a message, and the program replaces each letter with its secret
+                        counterpart
+                        based on the shift value. It's like writing your message in a secret code where 'a' becomes 'd'
+                        (if the
+                        shift is 3).
+
+                        <br>3. Decryption: To understand the message, you need to know the same secret shift value. The
+                        program can
+                        decode the message by shifting the letters back to their original positions.
+
+                        <br>4. User Input: You enter the message you want to encrypt and the shift value. It could be
+                        something like
+                        "Hello, world!" and a shift of 3.
+
+                        <br>5. Display: The code shows you the encrypted message (the one with shifted letters) and then
+                        decrypts it
+                        to reveal the original message.
+
+                        <br>In simple terms, this code turns your message into a secret code by shifting the letters,
+                        and you can decode
+                        it if you know the secret shift value. It's like having your own secret language.
+                    </p>
+
+                </div>
+            </div>
+        </div>
+        <!--Collapseable Content Ends-->
+
+        <!--Collapseable 4 Starts-->
+        <div class="container">
+        <!--Collapseable Content Starts-->
+        <div class="collapsible" onclick="toggleCollapse(this)">Caesar Cipher</div>
+        <div class="content">
+            <h3>⇒ Caesar Cipher </h3>
+            <p>Caesar Cipher is like a secret code that shifts letters in a message by a certain number. For example, if
+                you
+                shift by 3, "A" becomes "D," "B" becomes "E," and so on. It's like a simple letter substitution game.
+                It's not
+                super secure because someone could figure it out if they try different shifts, but it's a fun way to
+                hide
+                messages from curious eyes.</p>
+            <div id="code-container">
+                <pre id="code">
+    def caesar_encrypt(text, shift):
+    encrypted_text = ""
+    for char in text:
+        if char.isalpha():
+            is_upper = char.isupper()
+            char = char.lower()
+            shifted = ord(char) + shift
+            if shifted > ord('z'):
+                shifted -= 26
+            encrypted_text += chr(shifted).upper() if is_upper else chr(shifted)
+        else:
+            encrypted_text += char
+    return encrypted_text
+
+def caesar_decrypt(encrypted_text, shift):
+    decrypted_text = ""
+    for char in encrypted_text:
+        if char.isalpha():
+            is_upper = char.isupper()
+            char = char.lower()
+            shifted = ord(char) - shift
+            if shifted < ord('a'):
+                shifted += 26
+            decrypted_text += chr(shifted).upper() if is_upper else chr(shifted)
+        else:
+            decrypted_text += char
+    return decrypted_text
+
+# Get user input
+message = input("Enter a message: ")
+shift = int(input("Enter the Caesar Cipher shift value (e.g., 3): "))
+
+# Encrypt the message
+encrypted_message = caesar_encrypt(message, shift)
+print("Encrypted Message:", encrypted_message)
+
+# Decrypt the message
+decrypted_message = caesar_decrypt(encrypted_message, shift)
+print("Decrypted Message:", decrypted_message)
+
+        </pre>
+                <div id="buttons">
+                    <button id="copy-button" class="button">Copy Code</button>
+                    <a href="https://replit.com/@MuskanRauther/vignere#main.py" class="button">Execute Code</a>
+                </div>
+            </div>
+            <div>
+                <p><br>This code is like a simple way to turn your message into a secret code and then decode it. It
+                    uses a
+                    technique called the Caesar Cipher. Here's a simplified explanation:
+
+                    <br>1. Encryption: You enter a message and a number (like 3). The program takes each letter in your
+                    message
+                    and shifts it forward in the alphabet by that number. For example, 'A' becomes 'D,' 'B' becomes 'E,'
+                    and so
+                    on.
+
+                    <br>2. Decryption: To understand the message, you need to know the same number (in this case, 3).
+                    The
+                    program reverses the shift to reveal the original message.
+
+                    <br>3. User Input: You enter the message you want to encrypt (like "HELLO") and the number (like 3).
+
+                    <br>4. Display: The code shows you the encrypted message (the one with shifted letters), and then it
+                    decrypts it to reveal the original message.
+
+                    <br>In simple terms, it's like shifting your letters in the alphabet by a secret number. You can
+                    shift them back
+                    with the same number to read the message. It's like a simple secret code you and your friend can
+                    use.
+                </p>
+
+
+            </div>
+        </div>
+        <!--Collapseable Content Ends-->
+        </div>
+        <!--Collapseable 4 ends-->
+
+        <!--Collapseable 4 Starts-->
+        <div class="container">
+            <!--Collapseable Content Starts-->
+            <div class="collapsible" onclick="toggleCollapse(this)">Vigenère cipher</div>
+            <div class="content">
+                <h3>⇒ Vigenère cipher</h3>
+    <p>The Vigenère cipher is like a more advanced secret code for your messages. Instead of just shifting letters like
+        a simple substitution cipher, it uses a secret keyword to change how the letters are scrambled. This makes it
+        much harder to figure out the code. It's like having a secret codebook with different rules for each part of
+        your message, and only you and the person you're communicating with know the rules. While it's more secure than
+        simple ciphers, determined code-breakers can still crack it with enough effort.</p>
+    <div id="code-container">
+        <pre id="code">
+# Function to encrypt plaintext using the Vigenère cipher
+def encrypt(plaintext, key):
+    encrypted_text = ""
+    key_length = len(key)
+    for i in range(len(plaintext)):
+        char = plaintext[i]
+        if char.isalpha():
+            shift = ord(key[i % key_length].upper()) - ord('A')
+            if char.isupper():
+                encrypted_char = chr(((ord(char) - ord('A') + shift) % 26) + ord('A'))
+            else:
+                encrypted_char = chr(((ord(char) - ord('a') + shift) % 26) + ord('a'))
+            encrypted_text += encrypted_char
+        else:
+            encrypted_text += char
+    return encrypted_text
+
+# Function to decrypt ciphertext using the Vigenère cipher
+def decrypt(ciphertext, key):
+    decrypted_text = ""
+    key_length = len(key)
+    for i in range(len(ciphertext)):
+        char = ciphertext[i]
+        if char.isalpha():
+            shift = ord(key[i % key_length].upper()) - ord('A')
+            if char.isupper():
+                decrypted_char = chr(((ord(char) - ord('A') - shift) % 26) + ord('A'))
+            else:
+                decrypted_char = chr(((ord(char) - ord('a') - shift) % 26) + ord('a'))
+            decrypted_text += decrypted_char
+        else:
+            decrypted_text += char
+    return decrypted_text
+
+# Get user input for the text and encryption key
+plaintext = input("Enter the text to be encrypted: ")
+encryption_key = input("Enter the Vigenère cipher key: ")
+
+# Encrypt the data
+cipher_text = encrypt(plaintext, encryption_key)
+
+print(f"Encrypted Text: {cipher_text}")
+
+# Decrypt the data
+decrypted_text = decrypt(cipher_text, encryption_key)
+
+print(f"Decrypted Text: {decrypted_text}")
+        </pre>
+        <div id="buttons">
+            <button id="copy-button" class="button">Copy Code</button>
+            <a href="https://replit.com/@MuskanRauther/vigenere#main.py" class="button">Execute Code</a>
+        </div>
+    </div>
+    <div>
+        <p><br>This code is like a secret method to encrypt and decrypt messages using a special keyword. Here's a
+            simplified explanation:
+
+            <br>1. Keyword: You choose a secret keyword, like "SECRET." This keyword is like a secret codebook.
+
+            <br>2. Encryption: You enter a message and the keyword. The program uses the keyword to shift each letter in
+            your message. For example, if your keyword is "SECRET," and your message is "HELLO," it shifts 'H' by 'S,'
+            'E' by 'E,' and so on. This creates a secret code.
+
+            <br>3. Decryption: To understand the message, you need the same keyword. The program reverses the shifting
+            to reveal the original message.
+
+            <br>4. User Input: You enter the message you want to encrypt and the secret keyword. For example, "HELLO"
+            and "SECRET."
+
+            <br> 5. Display: The code shows you the encrypted message (the one with shifted letters) and then decrypts it
+            to reveal the original message.
+
+            <br>In simple terms, this code uses a secret keyword to scramble your message, and you can unscramble it with
+            the same keyword. It's like having your own secret language, and the keyword is your key to read and write
+            messages in that language.</p>
+            </div>
+
+            </div>
+            <!--Collapseable Content Ends-->
+            </div>
+            <!--Collapseable 4 ends-->
+
+
+    </div>
+    <!--Collapseable 3 ends-->
+
+    </div>
+    <!-- Testimonial End -->
+
+    <!-- Footer Start -->
+    <div class="container-fluid bg-dark text-light footer pt-5 mt-5 wow fadeIn" data-wow-delay="0.1s">
+        <div class="container py-5">
+            <div class="row g-5">
+                <div class="col-lg-3 col-md-6">
+                    <h4 class="text-white mb-3">Quick Link</h4>
+                    <a class="btn btn-link" href="">About Us</a>
+                    <a class="btn btn-link" href="">Contact Us</a>
+                    <a class="btn btn-link" href="">Privacy Policy</a>
+                    <a class="btn btn-link" href="">Terms & Condition</a>
+                    <a class="btn btn-link" href="">FAQs & Help</a>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <h4 class="text-white mb-3">Contact</h4>
+                    <p class="mb-2">
+                        <i class="fa fa-map-marker-alt me-3"></i>Shed No. 11, Gala No. 3,
+                        Sunita Estate, opp. Jainam Hall, Subhash Nagar, Bhandup West,
+                        Mumbai, Maharashtra 400078
+                    </p>
+                    <p class="mb-2">
+                        <i class="fa fa-phone-alt me-3"></i>+91 87793 38508
+                    </p>
+                    <p class="mb-2">
+                        <i class="fa fa-envelope me-3"></i>satishtutorial.bhandup@gmail.com
+                    </p>
+                    <div class="d-flex pt-2">
+                        <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-twitter"></i></a>
+                        <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-facebook-f"></i></a>
+                        <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-youtube"></i></a>
+                        <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <h4 class="text-white mb-3">Gallery</h4>
+                    <div class="row g-2 pt-2">
+                        <div class="col-4">
+                            <img class="img-fluid bg-light p-1" src="img/course-1.jpg" alt="" />
+                        </div>
+                        <div class="col-4">
+                            <img class="img-fluid bg-light p-1" src="img/course-2.jpg" alt="" />
+                        </div>
+                        <div class="col-4">
+                            <img class="img-fluid bg-light p-1" src="img/course-3.jpg" alt="" />
+                        </div>
+                        <div class="col-4">
+                            <img class="img-fluid bg-light p-1" src="img/course-2.jpg" alt="" />
+                        </div>
+                        <div class="col-4">
+                            <img class="img-fluid bg-light p-1" src="img/course-3.jpg" alt="" />
+                        </div>
+                        <div class="col-4">
+                            <img class="img-fluid bg-light p-1" src="img/course-1.jpg" alt="" />
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <h4 class="text-white mb-3">Newsletter</h4>
+                    <p>Dolor amet sit justo amet elitr clita ipsum elitr est.</p>
+                    <div class="position-relative mx-auto" style="max-width: 400px">
+                        <input class="form-control border-0 w-100 py-3 ps-4 pe-5" type="text"
+                            placeholder="Your email" />
+                        <button type="button" class="btn btn-primary py-2 position-absolute top-0 end-0 mt-2 me-2">
+                            SignUp
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <div class="copyright">
+                <div class="row">
+                    <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
+                        &copy; <a class="border-bottom" href="#">Your Site Name</a>, All
+                        Right Reserved.
+
+                        <!--/*** This template is free as long as you keep the footer author’s credit link/attribution link/backlink. If you'd like to use the template without the footer author’s credit link/attribution link/backlink, you can purchase the Credit Removal License from "https://htmlcodex.com/credit-removal". Thank you for your support. ***/-->
+                        Designed By
+                        <a class="border-bottom" href="https://htmlcodex.com">HTML Codex</a><br /><br />
+                        Distributed By
+                        <a class="border-bottom" href="https://themewagon.com">ThemeWagon</a>
+                    </div>
+                    <div class="col-md-6 text-center text-md-end">
+                        <div class="footer-menu">
+                            <a href="">Home</a>
+                            <a href="">Cookies</a>
+                            <a href="">Help</a>
+                            <a href="">FQAs</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Footer End -->
+
+    <script>
+        document
+            .getElementById("copy-button")
+            .addEventListener("click", function () {
+                var codeElement = document.getElementById("code");
+                var range = document.createRange();
+                range.selectNode(codeElement);
+                window.getSelection().removeAllRanges();
+                window.getSelection().addRange(range);
+
+                try {
+                    document.execCommand("copy");
+                    showNotification("Code has been copied to the clipboard.");
+                } catch (e) {
+                    console.error("Unable to copy code to the clipboard:", e);
+                }
+
+                window.getSelection().removeAllRanges();
+            });
+
+        function showNotification(message) {
+            if (Notification.permission !== "granted") {
+                Notification.requestPermission().then(function (permission) {
+                    if (permission === "granted") {
+                        var notification = new Notification("Code Copy Notification", {
+                            body: message,
+                        });
+                    }
+                });
+            } else {
+                var notification = new Notification("Code Copy Notification", {
+                    body: message,
+                });
+            }
+        }
+        function toggleCollapse(element) {
+            var content = element.nextElementSibling;
+            if (content.style.display === "block") {
+                content.style.display = "none";
+            } else {
+                content.style.display = "block";
+            }
+        }
+    </script>
+
+    <!-- Back to Top -->
+    <a href="#" class="btn btn-lg btn-primary btn-lg-square back-to-top"><i class="bi bi-arrow-up"></i></a>
+
+    <!-- JavaScript Libraries -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="lib/wow/wow.min.js"></script>
+    <script src="lib/easing/easing.min.js"></script>
+    <script src="lib/waypoints/waypoints.min.js"></script>
+    <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+
+    <!-- Template Javascript -->
+    <script src="js/main.js"></script>
+</body>
+
+</html>
